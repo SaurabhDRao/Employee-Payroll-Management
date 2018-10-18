@@ -615,7 +615,6 @@ private void Update_table() {
                 
                 
                 String imgStr = rs.getString("Image");
-//                File imgFile = new File(imgStr);
                 Image image = ImageIO.read(new File(imgStr));
                 ImageIcon imageIcon = new ImageIcon(new ImageIcon(image).getImage().getScaledInstance(img.getWidth(), img.getHeight(), Image.SCALE_SMOOTH));
                 img.setIcon(imageIcon);
