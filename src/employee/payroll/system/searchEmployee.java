@@ -105,7 +105,7 @@ private void Update_table() {
         txt_add2 = new javax.swing.JTextField();
         txt_address = new javax.swing.JTextField();
         jDesktopPane1 = new javax.swing.JDesktopPane();
-        lbl_img = new javax.swing.JLabel();
+        img = new javax.swing.JLabel();
         txt_salary = new javax.swing.JTextField();
         jLabel13 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
@@ -237,7 +237,7 @@ private void Update_table() {
             }
         });
 
-        jDesktopPane1.setLayer(lbl_img, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jDesktopPane1.setLayer(img, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
         jDesktopPane1.setLayout(jDesktopPane1Layout);
@@ -245,14 +245,14 @@ private void Update_table() {
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jDesktopPane1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(lbl_img, javax.swing.GroupLayout.DEFAULT_SIZE, 210, Short.MAX_VALUE)
+                .addComponent(img, javax.swing.GroupLayout.DEFAULT_SIZE, 210, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jDesktopPane1Layout.setVerticalGroup(
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jDesktopPane1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(lbl_img, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(img, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -615,8 +615,8 @@ private void Update_table() {
                 
                 
                 byte[] img = rs.getBytes("Image");
-                ImageIcon imageIcon = new ImageIcon(new ImageIcon(img).getImage().getScaledInstance(lbl_img.getWidth(), lbl_img.getHeight(), Image.SCALE_SMOOTH));
-                lbl_img.setIcon(imageIcon);
+                ImageIcon imageIcon = new ImageIcon(new ImageIcon(img).getImage().getScaledInstance(img.getWidth(), img.getHeight(), Image.SCALE_SMOOTH));
+                img.setIcon(imageIcon);
                }
 
         }catch(Exception e){
@@ -645,8 +645,8 @@ private void Update_table() {
         File f = chooser.getSelectedFile();
         
         filename =f.getAbsolutePath();
-        ImageIcon imageIcon = new ImageIcon(new ImageIcon(filename).getImage().getScaledInstance(lbl_img.getWidth(), lbl_img.getHeight(), Image.SCALE_DEFAULT));
-        lbl_img.setIcon(imageIcon);
+        ImageIcon imageIcon = new ImageIcon(new ImageIcon(filename).getImage().getScaledInstance(img.getWidth(), img.getHeight(), Image.SCALE_DEFAULT));
+        img.setIcon(imageIcon);
 
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
@@ -735,7 +735,7 @@ private void Update_table() {
                 txt_job.setText("");
                 txt_apt.setText("");
                 txt_doj.setText("");
-                lbl_img.setIcon(null);
+                img.setIcon(null);
                 txt_search.setText("");
 
             }catch(Exception e){
@@ -859,7 +859,7 @@ private void Update_table() {
         txt_job.setText("");
         txt_apt.setText("");
         txt_doj.setText("");
-        lbl_img.setIcon(null);
+        img.setIcon(null);
         txt_search.setText("");
 
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -902,6 +902,7 @@ private void Update_table() {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton cmd_delete;
+    private javax.swing.JLabel img;
     private javax.swing.JButton jButton1;
     private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JDesktopPane jDesktopPane1;
@@ -930,7 +931,6 @@ private void Update_table() {
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
-    private javax.swing.JLabel lbl_img;
     private java.awt.Panel panel1;
     private javax.swing.JRadioButton r_female;
     private javax.swing.JRadioButton r_male;
