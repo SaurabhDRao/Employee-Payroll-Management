@@ -113,25 +113,27 @@ PreparedStatement pst=null;
             }
         });
         jPanel2.add(cmd_Login);
-        cmd_Login.setBounds(160, 470, 70, 30);
+        cmd_Login.setBounds(90, 280, 90, 30);
 
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Username:");
         jPanel2.add(jLabel1);
-        jLabel1.setBounds(10, 360, 70, 16);
+        jLabel1.setBounds(30, 140, 90, 22);
 
+        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Password:");
         jPanel2.add(jLabel2);
-        jLabel2.setBounds(10, 400, 70, 16);
+        jLabel2.setBounds(30, 190, 90, 22);
 
-        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Please enter your username and password");
         jPanel2.add(jLabel6);
-        jLabel6.setBounds(10, 320, 241, 14);
+        jLabel6.setBounds(20, 100, 300, 17);
         jPanel2.add(txt_username);
-        txt_username.setBounds(100, 350, 132, 30);
+        txt_username.setBounds(160, 140, 170, 30);
 
         txt_password.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -144,7 +146,7 @@ PreparedStatement pst=null;
             }
         });
         jPanel2.add(txt_password);
-        txt_password.setBounds(100, 390, 132, 30);
+        txt_password.setBounds(160, 190, 170, 30);
 
         txt_combo.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Admin", "Sales", "Development", "Testing", " " }));
         txt_combo.addActionListener(new java.awt.event.ActionListener() {
@@ -153,7 +155,7 @@ PreparedStatement pst=null;
             }
         });
         jPanel2.add(txt_combo);
-        txt_combo.setBounds(100, 430, 130, 30);
+        txt_combo.setBounds(160, 240, 170, 30);
 
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Select Position:");
@@ -161,9 +163,9 @@ PreparedStatement pst=null;
         jLabel3.setBounds(10, 440, 100, 16);
 
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/employee/payroll/system/Images/bk3.jpg"))); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/employee/payroll/system/Images/login2.jpg"))); // NOI18N
         jPanel2.add(jLabel4);
-        jLabel4.setBounds(0, 0, 790, 510);
+        jLabel4.setBounds(0, 0, 790, 335);
 
         jMenu2.setText("File");
 
@@ -198,9 +200,7 @@ PreparedStatement pst=null;
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 509, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 333, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
