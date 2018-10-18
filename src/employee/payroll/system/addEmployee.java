@@ -176,6 +176,7 @@ PreparedStatement pst=null;
             }
         });
 
+        txt_id.setEditable(false);
         txt_id.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_idActionPerformed(evt);
@@ -582,10 +583,14 @@ PreparedStatement pst=null;
                 pst.setString(15,txt_job.getText());
                 pst.setString(16,txt_apt.getText());
                 pst.setString(17,txt_doj.getText());
-                pst.setString(18,txt_id.getText());
                 
                
-                
+                Statement stm = conn.createStatement();
+                rs = stm.executeQuery("select max(id) as id from staff_information");
+                if(rs.next()){
+                    int id = rs.getInt("id") + 1;
+                    pst.setInt(18, id);
+                }
 
                 pst.execute();
                 JOptionPane.showMessageDialog(null,"Data is saved successfully");
