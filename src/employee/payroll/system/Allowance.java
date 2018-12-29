@@ -527,6 +527,13 @@ PreparedStatement pst=null;
 
                 String add6 =rs.getString("Department");
                 txt_dept.setText(add6);
+            } else {
+                    txt_empid.setText("");
+                    txt_firstname.setText("");
+                    txt_surname.setText("");
+                    txt_dob.setText("");
+                    txt_salary.setText("");
+                    txt_dept.setText("");
             }
         
             

@@ -621,7 +621,26 @@ private void Update_table() {
                }
 
         }catch(Exception e){
-            System.out.println("No data");
+            txt_id.setText("");
+            txt_firstname.setText("");
+            txt_surname.setText("");
+            txt_tel.setText("");
+            txt_dob.setText("");
+            txt_email.setText("");
+            txt_address.setText("");
+            txt_dep.setText("");
+            txt_status.setText("");
+            txt_salary.setText("");
+            txt_add2.setText("");
+            txt_pc.setText("");
+            txt_desig.setText("");
+            txt_job.setText("");
+            txt_apt.setText("");
+            txt_doj.setText("");
+            img.setIcon(null);
+            txt_search.setText("");
+            r_male.setSelected(false);
+            r_female.setSelected(false);
         }
         finally {
 
@@ -862,7 +881,8 @@ private void Update_table() {
         txt_doj.setText("");
         img.setIcon(null);
         txt_search.setText("");
-
+        r_male.setSelected(false);
+        r_female.setSelected(false);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

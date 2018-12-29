@@ -324,6 +324,17 @@ PreparedStatement pst=null;
 
                 String add17 =rs.getString("Designation");
                 txt_desig.setText(add17);
+            } else {
+                txt_id.setText("");
+                txt_firstname.setText("");
+                txt_surname.setText("");
+                txt_dob.setText("");
+                txt_dep.setText("");
+                txt_status.setText("");
+                txt_salary.setText("");
+                txt_desig.setText("");
+                txt_job.setText("");
+                txt_doj.setText("");
             }
 
 

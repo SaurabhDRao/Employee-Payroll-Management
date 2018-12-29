@@ -20,7 +20,6 @@ public class db {
     public static Connection java_db(){
         
         try{
-            Class.forName("org.sqlite.JDBC");
             Class.forName("com.mysql.jdbc.Driver");
             Connection conn =DriverManager.getConnection("jdbc:mysql://localhost:3306/EmpMan","KnightShade","dragon391");
 //            Connection conn =DriverManager.getConnection("jdbc:sqlite:C:\\Users\\Hyrex\\Documents\\NetBeansProjects\\Employee Payroll System\\empnet.sqlite");

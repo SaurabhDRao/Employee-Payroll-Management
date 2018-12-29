@@ -475,6 +475,17 @@ PreparedStatement pst=null;
 
                 String add17 =rs.getString("Designation");
                 txt_desig.setText(add17);
+            } else {
+                txt_id.setText("");
+                txt_firstname.setText("");
+                txt_surname.setText("");
+                txt_dob.setText("");
+                txt_dep.setText("");
+                txt_status.setText("");
+                txt_salary.setText("");
+                txt_desig.setText("");
+                txt_job.setText("");
+                txt_doj.setText("");
             }
             
 
@@ -521,18 +532,23 @@ PreparedStatement pst=null;
                 if(rs.next()){
                     id = rs.getInt("id") + 1;
                 }
-                String sql ="insert into Deductions (firstname,surname,salary,deduction_amount,deduction_reason,emp_id, id,made_by) values (?,?,?,?,?,?,?,'"+value3+"')";
-                pst=conn.prepareStatement(sql);
-                pst.setString(1,txt_firstname.getText());
-                pst.setString(2,txt_surname.getText());
-                pst.setString(3,txt_salary.getText());
-                pst.setString(4,lbl_total.getText());
-                pst.setString(5,txt_reason.getText());
-                pst.setString(6,txt_id.getText());
-                pst.setInt(7,id);
-  
-                pst.execute();
-                JOptionPane.showMessageDialog(null,"Data is saved successfully");
+                
+                if(lbl_total.getText().equals("0.00")){
+                    JOptionPane.showMessageDialog(null,"Enter some amount to deduct!");
+                } else {
+                   String sql ="insert into Deductions (firstname,surname,salary,deduction_amount,deduction_reason,emp_id, id,made_by) values (?,?,?,?,?,?,?,'"+value3+"')";
+                   pst=conn.prepareStatement(sql);
+                   pst.setString(1,txt_firstname.getText());
+                   pst.setString(2,txt_surname.getText());
+                   pst.setString(3,txt_salary.getText());
+                   pst.setString(4,lbl_total.getText());
+                   pst.setString(5,txt_reason.getText());
+                   pst.setString(6,txt_id.getText());
+                   pst.setInt(7,id);
+
+                   pst.execute();
+                   JOptionPane.showMessageDialog(null,"Data is saved successfully");   
+                }
 
             }
             catch (Exception e)

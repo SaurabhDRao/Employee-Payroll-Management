@@ -93,7 +93,6 @@ PreparedStatement pst=null;
         jMenuItem7 = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
         btn_menu = new javax.swing.JMenu();
-        jMenuItem13 = new javax.swing.JMenuItem();
         jMenuItem5 = new javax.swing.JMenuItem();
         jMenu7 = new javax.swing.JMenu();
         jMenuItem3 = new javax.swing.JMenuItem();
@@ -188,12 +187,12 @@ PreparedStatement pst=null;
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Logged in As :");
         jPanel2.add(jLabel1);
-        jLabel1.setBounds(10, 590, 90, 14);
+        jLabel1.setBounds(10, 590, 90, 16);
 
         txt_emp.setForeground(new java.awt.Color(255, 255, 255));
         txt_emp.setText("Employee ID");
         jPanel2.add(txt_emp);
-        txt_emp.setBounds(90, 590, 80, 14);
+        txt_emp.setBounds(90, 590, 80, 16);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/employee/payroll/system/Images/bk2.jpg"))); // NOI18N
         jPanel2.add(jLabel2);
@@ -243,14 +242,6 @@ PreparedStatement pst=null;
 
         btn_menu.setText("Audit");
 
-        jMenuItem13.setText("Add User");
-        jMenuItem13.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem13ActionPerformed(evt);
-            }
-        });
-        btn_menu.add(jMenuItem13);
-
         jMenuItem5.setText("Audit Trail");
         jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -283,13 +274,6 @@ PreparedStatement pst=null;
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jMenuItem13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem13ActionPerformed
-        // TODO add your handling code here:
-        
-        users x = new users();
-        x.setVisible(true);
-    }//GEN-LAST:event_jMenuItem13ActionPerformed
 
     private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
         // TODO add your handling code here:
@@ -412,7 +396,7 @@ PreparedStatement pst=null;
           
           myDocument.add(new Paragraph("Employees List",FontFactory.getFont(FontFactory.TIMES_BOLD,20,Font.BOLD )));
           myDocument.add(new Paragraph(new Date().toString()));
-          myDocument.add(new Paragraph("-------------------------------------------------------------------------------------------"));
+          myDocument.add(new Paragraph("----------------------------------------------------------------------------------------------------------------------------------"));
           table.addCell(new PdfPCell(new Paragraph("ID",FontFactory.getFont(FontFactory.TIMES_ROMAN,9,Font.BOLD))));
           table.addCell(new PdfPCell(new Paragraph("First Name",FontFactory.getFont(FontFactory.TIMES_ROMAN,9,Font.BOLD))));
           table.addCell(new PdfPCell(new Paragraph("Surname",FontFactory.getFont(FontFactory.TIMES_ROMAN,9,Font.BOLD))));
@@ -448,7 +432,7 @@ PreparedStatement pst=null;
             }
            
            myDocument.add(table);
-           myDocument.add(new Paragraph("--------------------------------------------------------------------------------------------"));
+           myDocument.add(new Paragraph("----------------------------------------------------------------------------------------------------------------------------------"));
            myDocument.close();  
            JOptionPane.showMessageDialog(null,"Report was successfully generated");
             
@@ -506,7 +490,7 @@ PreparedStatement pst=null;
           
            myDocument.add(new Paragraph("Employees Allowance List",FontFactory.getFont(FontFactory.TIMES_BOLD,20,Font.BOLD )));
            myDocument.add(new Paragraph(new Date().toString()));
-           myDocument.add(new Paragraph("-------------------------------------------------------------------------------------------"));
+           myDocument.add(new Paragraph("----------------------------------------------------------------------------------------------------------------------------------"));
           table.addCell(new PdfPCell(new Paragraph("ID",FontFactory.getFont(FontFactory.TIMES_ROMAN,10,Font.BOLD))));
           table.addCell(new PdfPCell(new Paragraph("Overtime",FontFactory.getFont(FontFactory.TIMES_ROMAN,10,Font.BOLD))));
           table.addCell(new PdfPCell(new Paragraph("Medical",FontFactory.getFont(FontFactory.TIMES_ROMAN,10,Font.BOLD))));
@@ -539,7 +523,7 @@ PreparedStatement pst=null;
             }
            
            myDocument.add(table);
-           myDocument.add(new Paragraph("--------------------------------------------------------------------------------------------"));
+           myDocument.add(new Paragraph("----------------------------------------------------------------------------------------------------------------------------------"));
            myDocument.close();  
            JOptionPane.showMessageDialog(null,"Report was successfully generated");
             
@@ -620,7 +604,7 @@ PreparedStatement pst=null;
           
            myDocument.add(new Paragraph("Employees Deduction List",FontFactory.getFont(FontFactory.TIMES_BOLD,20,Font.BOLD )));
            myDocument.add(new Paragraph(new Date().toString()));
-           myDocument.add(new Paragraph("-------------------------------------------------------------------------------------------"));
+           myDocument.add(new Paragraph("----------------------------------------------------------------------------------------------------------------------------------"));
           table.addCell(new PdfPCell(new Paragraph("ID",FontFactory.getFont(FontFactory.TIMES_ROMAN,10,Font.BOLD))));
           table.addCell(new PdfPCell(new Paragraph("First Name",FontFactory.getFont(FontFactory.TIMES_ROMAN,10,Font.BOLD))));
           table.addCell(new PdfPCell(new Paragraph("Surname",FontFactory.getFont(FontFactory.TIMES_ROMAN,10,Font.BOLD))));
@@ -647,7 +631,7 @@ PreparedStatement pst=null;
             }
            
            myDocument.add(table);
-           myDocument.add(new Paragraph("--------------------------------------------------------------------------------------------"));
+           myDocument.add(new Paragraph("----------------------------------------------------------------------------------------------------------------------------------"));
            myDocument.close();  
            JOptionPane.showMessageDialog(null,"Report was successfully generated");
             
@@ -744,7 +728,6 @@ PreparedStatement pst=null;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuBar jMenuBar2;
     private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem13;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem5;

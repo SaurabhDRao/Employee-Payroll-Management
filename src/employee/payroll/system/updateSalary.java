@@ -359,6 +359,13 @@ PreparedStatement pst=null;
 
                     String add8 =rs.getString("Department");
                     txt_dept.setText(add8);
+               } else {
+                    txt_empid.setText("");
+                    txt_firstname.setText("");
+                    txt_surname.setText("");
+                    txt_dob.setText("");
+                    txt_salary.setText("");
+                    txt_dept.setText("");
                }
             
 
@@ -410,22 +417,26 @@ PreparedStatement pst=null;
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
        int p = JOptionPane.showConfirmDialog(null, "Are you sure you want to update salary?","Update Record",JOptionPane.YES_NO_OPTION);
-        if(p==0){
-       float salary = Float.parseFloat(txt_salary.getText());
-       
-          
-       if(r_percentage.isSelected()== true){
-       int getPercentage = Integer.parseInt(txt_dept1.getText());
-       float calcPercentage = salary /100 * getPercentage + salary;
-       String xP = String.valueOf(calcPercentage);
-       txt_salary.setText(xP);
-       }
-       
-       else if(r_amount.isSelected()==true){
-       int getAmt = Integer.parseInt(txt_dept2.getText());
-       float calcAmount = salary + getAmt;
-       String xA = String.valueOf(calcAmount);
-       txt_salary.setText(xA);
+       if(p==0){
+       try{
+                float salary = Float.parseFloat(txt_salary.getText());
+
+
+                if(r_percentage.isSelected()== true){
+                int getPercentage = Integer.parseInt(txt_dept1.getText());
+                float calcPercentage = salary /100 * getPercentage + salary;
+                String xP = String.valueOf(calcPercentage);
+                txt_salary.setText(xP);
+                }
+
+                else if(r_amount.isSelected()==true){
+                int getAmt = Integer.parseInt(txt_dept2.getText());
+                float calcAmount = salary + getAmt;
+                String xA = String.valueOf(calcAmount);
+                txt_salary.setText(xA);
+           }
+       } catch(Exception e){
+           JOptionPane.showMessageDialog(null,e);
        }
        try{
             Date currentDate = GregorianCalendar.getInstance().getTime();

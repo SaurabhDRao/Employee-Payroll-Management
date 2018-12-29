@@ -210,7 +210,7 @@ PreparedStatement pst=null;
     }else {
         
         
-        String sql = "select id,username,password from User Where (username =? and password =?)";
+        String sql = "select id,username,password from admin Where (username =? and password =?)";
                 
                 //"select * from Employeeinfo where username=? and password=? and division=? and id=?";
         try{
